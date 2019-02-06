@@ -119,23 +119,25 @@ class DataManager(data_manager.DataManager):
     def DataStats(self, set_name):
     	''' Display simple data statistics.'''
     	DF = self.toDF(set_name)
-    	return 0 # Return something better
+    	return DF.describe() # Return something better
     	
     def DataHist(self, set_name):
         ''' Show histograms.'''
         DF = self.toDF(set_name)
-        return 0 # Return something better
+        return DF.hist() # Return something better
     
     def ShowScatter(self, set_name):
         ''' Show scatter plots.'''
         DF = self.toDF(set_name)
         if set_name == 'train':
-        	return 0 # Return something better
+        	return sns.pairplot(DF) # Return something better
         else:
-        	return 0 # Return something better
+        	return sns.pairplot(DF) # Return something better
 
     def ShowSomethingElse(self):
         ''' Surprise me.'''
+	DF = self.toDF(set_name)
+	return DF.head()
         # For your project proposal, provide
         # a sketch with what you intend to do written in English (or French) is OK.
         pass
