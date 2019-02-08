@@ -124,7 +124,7 @@ class DataManager(data_manager.DataManager):
     def DataHist(self, set_name):
         ''' Show histograms.'''
         DF = self.toDF(set_name)
-        return DF.hist(figsize=(10, 10), bins=50, layout=(3, 2)); # Return something better
+        return DF.hist(figsize=(10, 10), bins=50, layout=(3, 2)) # Return something better
     
     def ShowScatter(self, set_name):
         ''' Show scatter plots.'''
