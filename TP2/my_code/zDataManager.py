@@ -140,7 +140,6 @@ class DataManager(data_manager.DataManager):
 	return DF.head()
         # For your project proposal, provide
         # a sketch with what you intend to do written in English (or French) is OK.
-        pass
         
     ##### END OF YOUR OWN METHODS ######################
     
