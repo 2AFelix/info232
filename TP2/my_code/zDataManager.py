@@ -130,7 +130,7 @@ class DataManager(data_manager.DataManager):
         ''' Show scatter plots.'''
         DF = self.toDF(set_name)
         if set_name == 'train':
-        	return sns.pairplot(DF) # Return something better
+        	return sns.pairplot(data, hue="target") # Return something better
         else:
         	return sns.pairplot(DF) # Return something better
 
